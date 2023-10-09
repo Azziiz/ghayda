@@ -1,0 +1,15 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    width: 100dvw;
+    gap: 50px;
+    justify-content: center;
+}
+
+.products{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+

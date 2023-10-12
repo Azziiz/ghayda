@@ -12,7 +12,7 @@ function Navbar() {
     <div className={styles.nav}>
       <Image src={Logo} alt='logo' className={styles.logo} priority/>
       <div className={styles.searcharea}>
-        <input type="text" className={styles.searchbar} placeholder='Search' />
+        <input type="text" className={styles.searchbar} placeholder='Search' onClick={() => {alert('hi')}}/>
         <span htmlFor="">
           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none" className={styles.svg}>
             <path d="M12.25 12.25L16 16" stroke="#151515" strokeLinecap="round" strokeLinejoin="round"/>

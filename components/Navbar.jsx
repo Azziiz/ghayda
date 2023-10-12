@@ -21,6 +21,10 @@ function Navbar() {
         </span>
       </div>
       <div className={styles.usersection}>
+      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none" className={styles.svg} id={styles.openSearch}> 
+            <path d="M12.25 12.25L16 16" stroke="#151515" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M1 7.42857C1 10.979 3.87816 13.8571 7.42855 13.8571C9.20679 13.8571 10.8165 13.1351 11.9803 11.9682C13.1401 10.8054 13.8571 9.20071 13.8571 7.42857C13.8571 3.87817 10.9789 1 7.42855 1C3.87816 1 1 3.87817 1 7.42857Z" stroke="#151515" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
         <svg width="32" height="37" viewBox="0 0 32 37" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.svg}>
           <path d="M1 36V33.8125C1 25.3556 7.71574 18.5 16 18.5C24.2843 18.5 31 25.3556 31 33.8125V36" stroke="#151515" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M16.0001 18.5C20.7339 18.5 24.5716 14.5824 24.5716 9.75C24.5716 4.91751 20.7339 1 16.0001 1C11.2663 1 7.42871 4.91751 7.42871 9.75C7.42871 14.5824 11.2663 18.5 16.0001 18.5Z" stroke="#151515" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -31,17 +35,17 @@ function Navbar() {
           <path d="M5.5 4.5H31L28 21H8.5L5.5 4.5ZM5.5 4.5C5.25 3.49999 4 1.5 1 1.5" stroke="#151515" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M28 21H8.5H5.84616C3.16969 21 1.75 22.1718 1.75 24C1.75 25.8282 3.16969 27 5.84616 27H27.25" stroke="#151515" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none" className={styles.menu} onClick={() => {setDrop2(1)}}>
+          <path d="M0.857422 0.5H12.5651" stroke="black" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M0.857422 5.5H12.5651" stroke="black" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M0.857422 10.5H12.5651" stroke="black" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none" className={styles.menu} onClick={() => {setDrop2(1)}}>
-        <path d="M0.857422 0.5H12.5651" stroke="black" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M0.857422 5.5H12.5651" stroke="black" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M0.857422 10.5H12.5651" stroke="black" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
       <div className={styles.dropDown}>
           {drop2 == 1 &&
           <>
             <div className={styles.blackSpace}>
-              <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg} id={styles.close} width="12" height="12" viewBox="0 0 12 12" fill="none" onClick={() => {setDrop2(2),setTimeout(() => {setDrop2(0)}, 700)}}>
+              <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg} id={styles.close} width="12" height="12" viewBox="0 0 12 12" fill="none" onClick={() => {setDrop2(2),setTimeout(() => {setDrop2(0)}, 600)}}>
                 <path d="M1 11L6.00002 6.00002M6.00002 6.00002L11 1M6.00002 6.00002L1 1M6.00002 6.00002L11 11"  strokeLinecap="round" strokeLinejoin="round"/>
               </svg>    
               <div className={styles.dropDownContent}>
@@ -65,7 +69,7 @@ function Navbar() {
           }
       </div>
       {drop2 == 1 &&
-        <div className={styles.focusLost} onClick={() => {setDrop2(2),setTimeout(() => {setDrop2(0)}, 700)}}></div>
+        <div className={styles.focusLost} onClick={() => {setDrop2(2),setTimeout(() => {setDrop2(0)}, 600)}}></div>
       }
     </div>
   )

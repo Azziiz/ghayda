@@ -1,14 +1,18 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import styles from '@/styles/navbar.module.css'
 import Logo from '@/assets/logo.png'
 import Image from 'next/image'
 
 function Navbar() {
+
+  const [drop2, setDrop2] = useState(0)
+
   return (
     <div className={styles.nav}>
       <Image src={Logo} alt='logo' className={styles.logo} priority/>
       <div className={styles.searcharea}>
-        <input type="text" className={styles.searchbar} placeholder='Search'/>
+        <input type="text" className={styles.searchbar} placeholder='Search' />
         <span htmlFor="">
           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none" className={styles.svg}>
             <path d="M12.25 12.25L16 16" stroke="#151515" strokeLinecap="round" strokeLinejoin="round"/>
@@ -28,11 +32,41 @@ function Navbar() {
           <path d="M28 21H8.5H5.84616C3.16969 21 1.75 22.1718 1.75 24C1.75 25.8282 3.16969 27 5.84616 27H27.25" stroke="#151515" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none" className={styles.menu && styles.svg}>
-        <path d="M0.857422 0.5H12.5651" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M0.857422 5.5H12.5651" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M0.857422 10.5H12.5651" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none" className={styles.menu} onClick={() => {setDrop2(1)}}>
+        <path d="M0.857422 0.5H12.5651" stroke="black" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M0.857422 5.5H12.5651" stroke="black" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M0.857422 10.5H12.5651" stroke="black" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
+      <div className={styles.dropDown}>
+          {drop2 == 1 &&
+          <>
+            <div className={styles.blackSpace}>
+              <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg} id={styles.close} width="12" height="12" viewBox="0 0 12 12" fill="none" onClick={() => {setDrop2(2),setTimeout(() => {setDrop2(0)}, 700)}}>
+                <path d="M1 11L6.00002 6.00002M6.00002 6.00002L11 1M6.00002 6.00002L1 1M6.00002 6.00002L11 11"  strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>    
+              <div className={styles.dropDownContent}>
+                <h2>Bracelets</h2>
+                <h2>Colliers</h2>
+              </div>          
+            </div>
+
+          </>
+          }
+          {drop2 == 2 && 
+            <div className={styles.blackSpace2}>
+              <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg} id={styles.close} width="12" height="12" viewBox="0 0 12 12" fill="none" onClick={() => {setDrop2(0)}}>
+                <path d="M1 11L6.00002 6.00002M6.00002 6.00002L11 1M6.00002 6.00002L1 1M6.00002 6.00002L11 11"  strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <div className={styles.dropDownContent}>
+                <h2>Bracelets</h2>
+                <h2>Colliers</h2>
+              </div>
+            </div>
+          }
+      </div>
+      {drop2 == 1 &&
+        <div className={styles.focusLost} onClick={() => {setDrop2(2),setTimeout(() => {setDrop2(0)}, 700)}}></div>
+      }
     </div>
   )
 }

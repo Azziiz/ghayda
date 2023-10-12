@@ -1,0 +1,127 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./styles/navbar.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************/
+.navbar_nav__bIAWS{
+    background-color: #ffff;
+    width: 100dvw;
+    max-height: 150px;
+    height: 20dvw;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 1px solid gainsboro;
+    
+}
+
+
+.navbar_logo__U0Ohb{
+    position: relative;
+    width: 120px;
+    height: 100px;
+    transition: 0.2s;
+}
+
+
+.navbar_searcharea__pt_NZ{
+    position: relative;
+    height: 55px;
+    width: 40dvw;
+    transition: 0.2s;
+    padding: 0px 25px 0px 0px;
+    
+}
+
+.navbar_searchbar__AHdhR{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    outline-color: none;
+    outline: #E9E9E9;
+    border: none;
+    padding: 0px 0px 0px 25px;
+    border-radius: 30px;
+    background-color: #E9E9E9;
+    
+}
+
+.navbar_searcharea__pt_NZ span{
+    position: absolute;
+    right: 0%;
+    top: 20%;
+    padding-right: 20px;
+}
+
+
+
+
+.navbar_usersection__y2i_M{
+    width: 170px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+}
+
+.navbar_menu__In7QR{
+    display: none;
+}
+
+.navbar_svg__eMFVP{
+    width: 35px;
+    height: 35px;
+    transition: 0.2s;
+}
+
+/*hover section*/
+
+.navbar_logo__U0Ohb:hover, .navbar_svg__eMFVP:hover{
+    transform: scale(1.1);
+}
+
+/*media query*/
+
+@media screen and (max-width: 800px) {
+    
+    .navbar_usersection__y2i_M{
+        display: none;
+    }
+
+    .navbar_searchbar__AHdhR{
+        display: none;
+    }
+
+    .navbar_menu__In7QR{
+        display: flex;
+    }
+
+    .navbar_searcharea__pt_NZ span{
+        position: absolute;
+        right: 0%;
+        top: 20%;
+        padding: 0%;
+        padding-left: 20px;
+    }
+    
+  }
+
+
+
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./app/page.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+.page_home__D7RxQ{
+    display: flex;
+    flex-direction: column;
+    width: 100dvw;
+    gap: 50px;
+    justify-content: center;
+}
+
+.page_products__7I7S8{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+

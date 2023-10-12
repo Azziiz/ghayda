@@ -6,11 +6,13 @@
     width: 100dvw;
     max-height: 150px;
     height: 20dvw;
-    min-height: 80px;
+    min-height: 110px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     border-bottom: 1px solid gainsboro;
+     z-index: 100000;
+
     
 }
 
@@ -20,6 +22,7 @@
     width: 120px;
     height: 100px;
     transition: 0.2s;
+    z-index: 10000;
 }
 
 
@@ -29,6 +32,7 @@
     width: 40dvw;
     transition: 0.2s;
     padding: 0px 25px 0px 0px;
+    z-index: 10000;
     
 }
 
@@ -42,6 +46,7 @@
     padding: 0px 0px 0px 25px;
     border-radius: 30px;
     background-color: #E9E9E9;
+    z-index: 10000;
     
 }
 
@@ -50,6 +55,7 @@
     right: 0%;
     top: 20%;
     padding-right: 20px;
+    z-index: 10000;
 }
 
 
@@ -60,10 +66,15 @@
     display: flex;
     justify-content: flex-end;
     gap: 50px;
+    z-index: 10000;
 }
 
 .navbar_menu__In7QR{
+    width: 35px;
+    height: 35px;
+    transition: 0.2s;
     display: none;
+    z-index: 10000;
 }
 
 .navbar_svg__eMFVP{
@@ -72,37 +83,172 @@
     transition: 0.2s;
 }
 
+
+
+.navbar_dropDownContent__dcjQc{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar_dropDownContent__dcjQc h2{
+    padding: 5px;
+    transition: 0.2s;
+}
+
+.navbar_dropDown__Iq83C{
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    justify-self: flex-end;
+    align-self: flex-start;
+    width: 100vw;
+    max-width: 600px;
+    right: 0px;
+    height: 100dvh;
+    align-items: flex-start;
+
+}
+
+.navbar_focusLost__QSr0v{
+    display: flex;
+    justify-self: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 101vh;
+    min-width: 300px;
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    transition: 0.7s;
+    top: 0%;
+    animation-name: navbar_slide__WB1B1;
+    animation-duration: 0.7s;
+    z-index: 100000;
+}
+
+.navbar_blackSpace__AT3Tz{
+    display: flex;
+    justify-self: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 101vh;
+    min-width: 300px;
+    background-color: white;
+    opacity: 1;
+    position: absolute;
+    transition: 0.7s;
+    top: 0%;
+    animation-name: navbar_slide__WB1B1;
+    animation-duration: 0.7s;
+    z-index: 1000000000;
+
+}
+
+.navbar_blackSpace2__w_qhb{
+    border-left: 1px solid gray;
+    display: flex;
+    justify-self: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 101vh;
+    min-width: 300px;
+    background-color: white;
+    opacity: 1;
+    position: absolute;
+    z-index: 100000;
+    transition: 0.7s;
+    top: 0%;
+    animation-name: navbar_slide__WB1B1;
+    animation-duration: 0.7s;
+    animation-direction: reverse;
+ 
+}
+
+/*id section*/
+
+#navbar_close__G5Brb{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: black;
+    stroke: black;
+}
+
+#navbar_openSearch__y8BSN{
+    display: none;
+}
+
 /*hover section*/
 
-.navbar_logo__U0Ohb:hover, .navbar_svg__eMFVP:hover{
+.navbar_logo__U0Ohb:hover, .navbar_svg__eMFVP:hover, .navbar_menu__In7QR:hover{
     transform: scale(1.1);
+}
+
+.navbar_dropDownContent__dcjQc h2:hover{
+    color: var(--purple);
+    border-bottom: 2px solid var(--purple);
+}
+
+#navbar_close__G5Brb:hover{
+    stroke: var(--purple);
 }
 
 /*media query*/
 
 @media screen and (max-width: 800px) {
-    
-    .navbar_usersection__y2i_M{
+
+ 
+
+    .navbar_searcharea__pt_NZ{
         display: none;
     }
 
-    .navbar_searchbar__AHdhR{
-        display: none;
-    }
 
     .navbar_menu__In7QR{
         display: flex;
+        width: 25px;
+        height: 25px;
     }
 
-    .navbar_searcharea__pt_NZ span{
-        position: absolute;
-        right: 0%;
-        top: 20%;
-        padding: 0%;
-        padding-left: 20px;
+    .navbar_usersection__y2i_M{
+        position: relative;
+        display: flex;
+        width: 55dvw;
+        justify-content: space-evenly;
+        gap: 0;
+
     }
-    
+
+    .navbar_svg__eMFVP{
+        width: 25px;
+        height: 25px;
+        size: 25px;
+    }
+
+    #navbar_openSearch__y8BSN{
+        display: flex;
+    }
+
+
   }
+
+
+  /*animations*/
+
+  @keyframes navbar_slide__WB1B1 {
+    from{
+        transform: translateX(100%);
+    }
+
+    to{
+        transform: translateX(0%);
+    }
+}
 
 
 

@@ -3,13 +3,12 @@
     width: 100dvw;
     max-height: 150px;
     height: 20dvw;
-    min-height: 80px;
+    min-height: 110px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     border-bottom: 1px solid gainsboro;
      z-index: 100000;
-     position: relative;
 
     
 }
@@ -64,6 +63,7 @@
     display: flex;
     justify-content: flex-end;
     gap: 50px;
+    z-index: 10000;
 }
 
 .menu{
@@ -80,15 +80,7 @@
     transition: 0.2s;
 }
 
-#close{
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    left: 15px;
-    top: 15px;
-    color: black;
-    stroke: black;
-}
+
 
 .dropDownContent{
     display: flex;
@@ -109,9 +101,9 @@
     gap: 10px;
     justify-self: flex-end;
     align-self: flex-start;
-    width: 100%;
+    width: 100vw;
     max-width: 600px;
-    right: -40px;
+    right: 0px;
     height: 100dvh;
     align-items: flex-start;
 
@@ -127,10 +119,10 @@
     background-color: black;
     opacity: 0.5;
     position: absolute;
-    transition: 1s;
+    transition: 0.7s;
     top: 0%;
     animation-name: slide;
-    animation-duration: 0.1s;
+    animation-duration: 0.7s;
     z-index: 100000;
 }
 
@@ -144,7 +136,7 @@
     background-color: white;
     opacity: 1;
     position: absolute;
-    transition: 1s;
+    transition: 0.7s;
     top: 0%;
     animation-name: slide;
     animation-duration: 0.7s;
@@ -164,12 +156,28 @@
     opacity: 1;
     position: absolute;
     z-index: 100000;
-    transition: 1s;
+    transition: 0.7s;
     top: 0%;
     animation-name: slide;
     animation-duration: 0.7s;
     animation-direction: reverse;
  
+}
+
+/*id section*/
+
+#close{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: black;
+    stroke: black;
+}
+
+#openSearch{
+    display: none;
 }
 
 /*hover section*/
@@ -191,19 +199,35 @@
 
 @media screen and (max-width: 800px) {
 
-    
-    .usersection{
+ 
+
+    .searcharea{
         display: none;
     }
 
 
-    .searcharea{
-        width: 60dvw;
-        right: 20px;
+    .menu{
+        display: flex;
+        width: 25px;
+        height: 25px;
     }
 
+    .usersection{
+        position: relative;
+        display: flex;
+        width: 55dvw;
+        justify-content: space-evenly;
+        gap: 0;
 
-    .menu{
+    }
+
+    .svg{
+        width: 25px;
+        height: 25px;
+        size: 25px;
+    }
+
+    #openSearch{
         display: flex;
     }
 

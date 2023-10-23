@@ -1,15 +1,18 @@
 .home{
     display: flex;
     flex-direction: column;
-    width: 100dvw;
+    width: 100%;
     gap: 50px;
     justify-content: center;
+    margin-top: 50px;
+
 }
 
 .products{
     display: flex;
     justify-content: center;
     gap: 20px;
+    
 }
 
 

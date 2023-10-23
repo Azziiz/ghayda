@@ -4,6 +4,7 @@ import { collection, getDocs } from 'firebase/firestore'
 import { useEffect, useState } from 'react';
 import styles from './page.module.css'
 import Navbar from '@/components/Navbar';
+import Product from '@/components/Product'
 
 
 const FDFF = async () => {
@@ -34,10 +35,11 @@ export default function Home() {
 
   return (
     <div className={styles.home}>
-        <Navbar /> 
-        {products?.map(product => (
-          <h1 key={product.id}>{product.name}</h1>
-        ))}
+        <div className={styles.products}>
+          {products?.map(product => (
+            <Product key={product.id} Id={product.id}/>
+          ))}
+        </div>
     </div>
   )
 }

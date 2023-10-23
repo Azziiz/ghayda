@@ -1,12 +1,17 @@
 :root{
     --purple: #A394FF;
-    
 }
 
+
+html{
+    width: 100%;
+    margin-bottom: 100px;
+}
 
 *{
     padding: 0px;
     margin: 0px;
     text-decoration: none;
     user-select: none;
+    
 }

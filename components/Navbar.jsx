@@ -3,16 +3,18 @@ import React, { useState } from 'react'
 import styles from '@/styles/navbar.module.css'
 import Logo from '@/assets/logo.png'
 import Image from 'next/image'
+import Link from 'next/link'
 
 function Navbar() {
 
+  const [searchBar, setSearchBar] = useState(0)
   const [drop2, setDrop2] = useState(0)
 
   return (
     <div className={styles.nav}>
-      <Image src={Logo} alt='logo' className={styles.logo} priority/>
+      <Link href='/'><Image src={Logo} alt='logo' className={styles.logo} priority/></Link>
       <div className={styles.searcharea}>
-        <input type="text" className={styles.searchbar} placeholder='Search' onClick={() => {alert('hi')}}/>
+        <input type="text" className={styles.searchbar} placeholder='Search' />
         <span htmlFor="">
           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none" className={styles.svg}>
             <path d="M12.25 12.25L16 16" stroke="#151515" strokeLinecap="round" strokeLinejoin="round"/>
@@ -21,7 +23,7 @@ function Navbar() {
         </span>
       </div>
       <div className={styles.usersection}>
-      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none" className={styles.svg} id={styles.openSearch}> 
+      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none" className={styles.svg} id={styles.openSearch} onClick={() => {setSearchBar(1)}}> 
             <path d="M12.25 12.25L16 16" stroke="#151515" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M1 7.42857C1 10.979 3.87816 13.8571 7.42855 13.8571C9.20679 13.8571 10.8165 13.1351 11.9803 11.9682C13.1401 10.8054 13.8571 9.20071 13.8571 7.42857C13.8571 3.87817 10.9789 1 7.42855 1C3.87816 1 1 3.87817 1 7.42857Z" stroke="#151515" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
@@ -53,7 +55,6 @@ function Navbar() {
                 <h2>Colliers</h2>
               </div>          
             </div>
-
           </>
           }
           {drop2 == 2 && 
@@ -71,6 +72,43 @@ function Navbar() {
       {drop2 == 1 &&
         <div className={styles.focusLost} onClick={() => {setDrop2(2),setTimeout(() => {setDrop2(0)}, 600)}}></div>
       }
+      <div className={styles.searchBarDrop}>
+        {
+          searchBar == 1 && 
+          <div className={styles.whiteSpace}>
+            <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg} id={styles.close} width="12" height="12" viewBox="0 0 12 12" fill="none" onClick={() => {setSearchBar(2),setTimeout(() => {setSearchBar(0)}, 600)}}>
+              <path d="M1 11L6.00002 6.00002M6.00002 6.00002L11 1M6.00002 6.00002L1 1M6.00002 6.00002L11 11"  strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>   
+            <div className={styles.searchareaM}>
+              <input type="text" className={styles.searchbar} placeholder='Search' />
+              <span htmlFor="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none" className={styles.svg}>
+                  <path d="M12.25 12.25L16 16" stroke="#151515" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M1 7.42857C1 10.979 3.87816 13.8571 7.42855 13.8571C9.20679 13.8571 10.8165 13.1351 11.9803 11.9682C13.1401 10.8054 13.8571 9.20071 13.8571 7.42857C13.8571 3.87817 10.9789 1 7.42855 1C3.87816 1 1 3.87817 1 7.42857Z" stroke="#151515" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        }
+        {
+          searchBar == 2 && 
+          <div className={styles.whiteSpace2}>
+            <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg} id={styles.close} width="12" height="12" viewBox="0 0 12 12" fill="none" onClick={() => {setSearchBar(0)}}>
+              <path d="M1 11L6.00002 6.00002M6.00002 6.00002L11 1M6.00002 6.00002L1 1M6.00002 6.00002L11 11"  strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <div className={styles.searchareaM}>
+              <input type="text" className={styles.searchbar} placeholder='Search' />
+              <span htmlFor="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none" className={styles.svg}>
+                  <path d="M12.25 12.25L16 16" stroke="#151515" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M1 7.42857C1 10.979 3.87816 13.8571 7.42855 13.8571C9.20679 13.8571 10.8165 13.1351 11.9803 11.9682C13.1401 10.8054 13.8571 9.20071 13.8571 7.42857C13.8571 3.87817 10.9789 1 7.42855 1C3.87816 1 1 3.87817 1 7.42857Z" stroke="#151515" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        }
+      </div>
+    
     </div>
   )
 }

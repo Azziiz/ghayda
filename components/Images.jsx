@@ -1,17 +1,32 @@
 import styles from '@/styles/images.module.css'
-import Logo from '@/assets/logo.png'
-
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.css";
 function Images() {
   return (
-    <div className={styles.container}>
-        <div className={styles.main}>
-          <img alt="main photo"  src='https://s3-alpha-sig.figma.com/img/ea6c/4bde/5e720c25edaaff9a1145a129c7811198?Expires=1698624000&Signature=kIosju~EOG4rA1WIcPaYuln1APwN72lCqPm7b0ALhdwz1RYmLYJw-ckiozSyRE7yMGXhBzRuUxt8eMIhY2Nd~~AVVdICgs03Ej6Pgjxl1~35yS5JoZA9UAFamgE7jQGI1mQ0SVpKebZF1AjsRFNlg3qNyLJ6sBhuCsqDx0tgm~Wfn-utCzE~mO52jedHPw7Qu3vEbF4SCOKpNMVCwa9V48QnJHTF95OSl4La3ezZVEnDkR9BjxHtOcWg2cxOrIQAcnPoddP3V~2RyPhChagjKK3c2~a96AhEVCuYgT9qXPPQQdYOTC0hhsdjhW9Gt7RqCOUzXmsBuSGQteN1sc70gw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4' />
-        </div>
-        <div className={styles.secondry}>
-            <img src="" alt="" className={styles}/>
-            <img src="" alt="" className={styles}/>
-        </div>
+    <div class="container">
+
+  <div id="js-gallery" class="gallery">
+
+    <div class="gallery__hero">
+      <a href="" class="gallery__hero-enlarge ir" data-gallery="zoom">Zoom</a>
+
+      <img src="https://public-619e3.firebaseapp.com/Product-Gallery/products/normal/product-01_view-01.jpg"/>
     </div>
+
+    <div class="gallery__thumbs">
+        <a href="https://public-619e3.firebaseapp.com/Product-Gallery/products/normal/product-01_view-01.jpg" data-gallery="thumb" class="is-active">
+          <img src="https://public-619e3.firebaseapp.com/Product-Gallery/products/thumb/product-01_view-01.jpg"/>
+        </a>
+        <a href="https://public-619e3.firebaseapp.com/Product-Gallery/products/normal/product-01_view-02.jpg" data-gallery="thumb" >
+          <img src="https://public-619e3.firebaseapp.com/Product-Gallery/products/thumb/product-01_view-02.jpg"/>
+        </a>
+        <a href="https://public-619e3.firebaseapp.com/Product-Gallery/products/normal/product-01_view-03.jpg" data-gallery="thumb">
+          <img src="https://public-619e3.firebaseapp.com/Product-Gallery/products/thumb/product-01_view-03.jpg" />
+        </a>
+    </div>
+
+  </div>
+ </div>
   )
 }
 

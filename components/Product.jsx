@@ -1,19 +1,6 @@
 import styles from '@/styles/product.module.css'
-import { Nunito, Original_Surfer } from 'next/font/google'
+import { nunito, original_Surfer } from '@/fonts'
 import Link from 'next/link'
-
-
-  const  original_Surfer = Original_Surfer({
-    weight: [ '400'], 
-    subsets: ['latin'],
-    variable: '--font-surfer'
-    })
-
-  const  nunito = Nunito({
-    weight: [ '400'], 
-    subsets: ['latin'],
-    variable: '--font-surfer'
-    })  
 
 function product({Id}) {
 

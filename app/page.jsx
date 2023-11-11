@@ -37,8 +37,9 @@ export default function Home() {
     <div className={styles.home}>
         <div className={styles.products}>
           {products?.map(product => (
-            <Product key={product.id} Id={product.id}/>
+            <Product key={product.id} Id={product.id} Product={product}/>
           ))}
+
         </div>
     </div>
   )

@@ -9,6 +9,7 @@
 html{
     width: 100%;
     margin-bottom: 100px;
+    margin-top: 150px;
 }
 
 *{
@@ -20,15 +21,19 @@ html{
             user-select: none;
     
 }
+
+
 /*!********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./styles/navbar.module.css ***!
   \********************************************************************************************************************************************************************************************************************************************************************/
 .navbar_nav__bIAWS{
+    position: fixed;
+    top: 0px;
     background-color: #ffff;
     width: 100%;
-    max-height: 150px;
+    max-height: 100px;
     height: 20dvw;
-    min-height: 110px;
+    min-height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -41,10 +46,12 @@ html{
 
 .navbar_logo__U0Ohb{
     position: relative;
-    width: 120px;
-    height: 100px;
+    width: 110px;
+    height: 90px;
     transition: 0.2s;
     z-index: 10000;
+    padding: 10px;
+    padding-top: 20px;
 }
 
 
@@ -128,7 +135,7 @@ html{
     width: 100vw;
     max-width: 600px;
     right: 0px;
-    height: 100dvh;
+    height: 100px;
     align-items: flex-start;
 
 }
@@ -141,9 +148,9 @@ html{
     align-self: flex-start;
     width: 100%;
     right: 0px;
-    max-height: 150px;
+    max-height: 100px;
     height: 20dvw;
-    min-height: 110px;
+    min-height: 70px;
     align-items: flex-start;
 
 }

@@ -1,8 +1,8 @@
 .main{
     margin-top: 100px;
     display: flex;
-    justify-content: space-between;
-    margin-left: 130px;
+    justify-content: space-evenly;
+    margin-left: 50px;
     width: 100vw;
 }
 
@@ -12,11 +12,19 @@
     width: 100%;
 }
 
+.gallery{
+    width: 40%;
+    height: 900px;
+}
+
 .product_info{
     min-width: 300px;
     max-width: 800px;
-    width: calc(100vw - 900px);
-    justify-self: stretch;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
 }
 
 
@@ -43,6 +51,231 @@
     letter-spacing: 0.54px;
     text-transform: uppercase;
     position: relative;
-    left: 100%;
+    left: 95%;
     top: -20px;
+}
+
+.color_options{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.color_options h2{
+    color: #000;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.54px;
+    text-transform: uppercase;
+}
+
+.color{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.quntite{
+    display: flex;
+    gap: 5px;
+    z-index: 00000;
+}
+
+.quntite h2{
+    color: #000;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.54px;
+    text-transform: uppercase;
+}
+
+.quntite button{
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: #A394FF;
+    color: #FFF;
+    transition: 0.2s;
+}
+
+
+.quntite div{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: #A394FF;
+    color: #FFF;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+
+.quntite button:hover{
+    scale: 1.1;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.buttons button{
+    width: 100%;
+    border-radius: 20px;
+    text-align: center;
+    border: none;
+    padding: 10px;
+    transition: 0.2s;
+
+}
+
+
+.desc{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.desc h2{
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: lowercase;
+}
+
+.desc h4{
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.45px;
+    text-transform: uppercase;
+}
+
+.rec{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.rec h2{
+    color: #000;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.63px;
+    text-transform: uppercase;    
+}
+
+.rec div{
+    display: flex;
+    gap: 20px;
+}
+
+.rec div img{
+    width: 150px;
+    height: 150px;
+    background: #E8DFFF;
+}
+
+
+
+
+/* id section */ 
+
+#commander{
+    background-color: #A394FF;
+    color: #FFF;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.45px;
+    text-transform: uppercase;
+}
+
+#ajb{
+    border-radius: 20px;
+    border: 1px solid #A394FF;
+    background: #FFF;
+    color: #A394FF;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.45px;
+    text-transform: uppercase;
+}
+
+/*hover section*/
+
+.buttons button:hover{
+    scale: 1.02;
+}
+
+#commander:hover{
+    border: 1px solid #A394FF;
+    background: #FFF;
+    color: #A394FF;
+}
+
+#ajb:hover{
+    background-color: #A394FF;
+    color: #FFF;
+}
+
+
+/*media quary*/
+
+@media screen and (max-width: 1000px) {
+
+    .main{
+        margin-left: 0px;
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        
+    }
+
+    .top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .gallery{
+        width: 90vw;
+        max-height: 600px;
+        min-height: 200px;
+        height: 500px;
+    }
+    
+    .product_info{
+        width: 90%;
+    }
+
+    .product_info{
+        gap: 20px;
+    
+    }
+
+    .price{
+        left: 80%;
+    }
+
 }

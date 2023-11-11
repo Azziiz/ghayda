@@ -2,11 +2,13 @@
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./styles/navbar.module.css ***!
   \********************************************************************************************************************************************************************************************************************************************************************/
 .navbar_nav__bIAWS{
+    position: fixed;
+    top: 0px;
     background-color: #ffff;
     width: 100%;
-    max-height: 150px;
+    max-height: 100px;
     height: 20dvw;
-    min-height: 110px;
+    min-height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -19,10 +21,12 @@
 
 .navbar_logo__U0Ohb{
     position: relative;
-    width: 120px;
-    height: 100px;
+    width: 110px;
+    height: 90px;
     transition: 0.2s;
     z-index: 10000;
+    padding: 10px;
+    padding-top: 20px;
 }
 
 
@@ -106,7 +110,7 @@
     width: 100vw;
     max-width: 600px;
     right: 0px;
-    height: 100dvh;
+    height: 100px;
     align-items: flex-start;
 
 }
@@ -119,9 +123,9 @@
     align-self: flex-start;
     width: 100%;
     right: 0px;
-    max-height: 150px;
+    max-height: 100px;
     height: 20dvw;
-    min-height: 110px;
+    min-height: 70px;
     align-items: flex-start;
 
 }
@@ -412,7 +416,11 @@
     position: relative;
     height: 400px;
     width: 100%;
-    background-color:#FFF2D8;;
+}
+
+.product_img__iLj_x img{
+    width: 100%;
+    height: 100%;
 }
 
 .product_underImg__0HE7J{
@@ -441,6 +449,16 @@
     bottom: 20px;
     width: 175px;
     height: 45px;
+    color: #000;
+    z-index: 10000;
+    font-family: Nunito;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.54px;
+    text-transform: uppercase;
+    transition: 0.2s;
 }
 
 .product_title__XY6wv{
@@ -458,7 +476,6 @@ text-transform: lowercase;
     align-items: center;
     width: 60px;
     height: 60px;
-    background-color: #FFF2D8;;
     border-radius: 50%;
     font-size: 12px;
     font-style: normal;
@@ -469,6 +486,13 @@ text-transform: lowercase;
     position: absolute;
     right: 0%;
     top: 0px;
+}
+
+/*hover*/
+
+
+.product_AjPanier___MSqb:hover{
+    scale: 1.02;
 }
 /*!***************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./app/page.module.css ***!
@@ -486,7 +510,8 @@ text-transform: lowercase;
 .page_products__7I7S8{
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
+    flex-wrap: wrap;
     
 }
 

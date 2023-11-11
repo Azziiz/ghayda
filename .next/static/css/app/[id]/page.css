@@ -2,42 +2,51 @@
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./styles/images.module.css ***!
   \********************************************************************************************************************************************************************************************************************************************************************/
 .images_con__LVpfl{
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
-  width: 600px;
-  height: 900px;
+  width: 100%;
+  height: 100%;
 }
 
 .images_main_con__UN1Ls{
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #E8DFFF;
-  width: 600px;
-  height: 600px;
-  max-height: 600px;
+  width: 100%;
+  height: 100%;
+
 
 }
 
 .images_embla__3RsVP {
   overflow: hidden;
+  width: 100%;
+  height: 70%;
 }
 .images_embla__container__RqRHE {
   display: flex;
-  width: 600px;
+  width: 100%;
+  height: 100%;
 }
 .images_embla__slide__c4App {
   flex: 0 0 100%;
+  height: 100%;
   min-width: 0;
 }
 
 
 .images_main__FiwCr{
-  max-width: 400px;
-  max-height: 400px;
+  position: relative;
+  min-width: 200px;
+  min-height: 200px;
+  max-width: 500px;
+  max-height: 500px;
   width: auto;
   height: auto;
 }
@@ -45,7 +54,7 @@
 .images_sec_con__1JSdI{
   display: flex;
   width:  100%;
-  height: 33%;
+  height: 30%;
   gap: 20px;
 
 
@@ -62,11 +71,10 @@
   
 }
 .images_sec_con__1JSdI img{
-  background: #E8DFFF;
   max-width: 200px;
   max-height: 200px;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
 }
 
 /*hover*/
@@ -74,6 +82,15 @@
   scale: 1.02;
 }
 
+/* media quary*/
+
+@media screen and (max-width: 1000px) {
+
+  .images_sec_con__1JSdI{
+    display: none;
+  }
+  
+}
 
 
 /*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
@@ -150,8 +167,8 @@
 .page_main__N8rVR{
     margin-top: 100px;
     display: flex;
-    justify-content: space-between;
-    margin-left: 130px;
+    justify-content: space-evenly;
+    margin-left: 50px;
     width: 100vw;
 }
 
@@ -161,11 +178,19 @@
     width: 100%;
 }
 
+.page_gallery__i_bR1{
+    width: 40%;
+    height: 900px;
+}
+
 .page_product_info__1gQ6p{
     min-width: 300px;
     max-width: 800px;
-    width: calc(100vw - 900px);
-    justify-self: stretch;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
 }
 
 
@@ -192,6 +217,232 @@
     letter-spacing: 0.54px;
     text-transform: uppercase;
     position: relative;
-    left: 100%;
+    left: 95%;
     top: -20px;
 }
+
+.page_color_options__qPa69{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.page_color_options__qPa69 h2{
+    color: #000;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.54px;
+    text-transform: uppercase;
+}
+
+.page_color__j5UrJ{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.page_quntite__gPrLw{
+    display: flex;
+    gap: 5px;
+    z-index: 00000;
+}
+
+.page_quntite__gPrLw h2{
+    color: #000;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.54px;
+    text-transform: uppercase;
+}
+
+.page_quntite__gPrLw button{
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: #A394FF;
+    color: #FFF;
+    transition: 0.2s;
+}
+
+
+.page_quntite__gPrLw div{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: #A394FF;
+    color: #FFF;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+
+.page_quntite__gPrLw button:hover{
+    scale: 1.1;
+}
+
+.page_buttons__JQzQx{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.page_buttons__JQzQx button{
+    width: 100%;
+    border-radius: 20px;
+    text-align: center;
+    border: none;
+    padding: 10px;
+    transition: 0.2s;
+
+}
+
+
+.page_desc__WE_9z{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.page_desc__WE_9z h2{
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: lowercase;
+}
+
+.page_desc__WE_9z h4{
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.45px;
+    text-transform: uppercase;
+}
+
+.page_rec__wLmZq{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.page_rec__wLmZq h2{
+    color: #000;
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.63px;
+    text-transform: uppercase;    
+}
+
+.page_rec__wLmZq div{
+    display: flex;
+    gap: 20px;
+}
+
+.page_rec__wLmZq div img{
+    width: 150px;
+    height: 150px;
+    background: #E8DFFF;
+}
+
+
+
+
+/* id section */ 
+
+#page_commander__U1S6d{
+    background-color: #A394FF;
+    color: #FFF;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.45px;
+    text-transform: uppercase;
+}
+
+#page_ajb__zmdKY{
+    border-radius: 20px;
+    border: 1px solid #A394FF;
+    background: #FFF;
+    color: #A394FF;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.45px;
+    text-transform: uppercase;
+}
+
+/*hover section*/
+
+.page_buttons__JQzQx button:hover{
+    scale: 1.02;
+}
+
+#page_commander__U1S6d:hover{
+    border: 1px solid #A394FF;
+    background: #FFF;
+    color: #A394FF;
+}
+
+#page_ajb__zmdKY:hover{
+    background-color: #A394FF;
+    color: #FFF;
+}
+
+
+/*media quary*/
+
+@media screen and (max-width: 1000px) {
+
+    .page_main__N8rVR{
+        margin-left: 0px;
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        
+    }
+
+    .page_top__EbHx0{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .page_gallery__i_bR1{
+        width: 90vw;
+        max-height: 600px;
+        min-height: 200px;
+        height: 500px;
+    }
+    
+    .page_product_info__1gQ6p{
+        width: 90%;
+    }
+
+    .page_product_info__1gQ6p{
+        gap: 20px;
+    
+    }
+
+    .page_price__kpqjE{
+        left: 80%;
+    }
+
+}
+

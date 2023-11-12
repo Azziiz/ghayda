@@ -27,7 +27,7 @@ function ProductPage() {
     console.log(data?.id)
 
     const ajoute = () => {
-      addProductToP(auth.currentUser.displayName, auth.currentUser.uid, quntite, id)
+      addProductToP(auth?.currentUser?.displayName, auth?.currentUser?.uid, quntite, id)
     }
 
   return (

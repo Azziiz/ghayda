@@ -2,7 +2,6 @@
 import { auth, db } from "@/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { addDoc, collection, getDocs, query, updateDoc, where, doc } from "firebase/firestore";
-import _ from "lodash";
 import { createContext, useContext, useEffect, useState } from "react";
 
 

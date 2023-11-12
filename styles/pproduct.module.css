@@ -1,0 +1,77 @@
+.main {
+    display: flex;
+}
+
+.main div {
+    display: flex;
+    flex-direction: column;
+}
+
+.quntite{
+    display: flex;
+    gap: 5px;
+    z-index: 00000;
+}
+
+.quntite h2{
+    color: #000;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.54px;
+    text-transform: uppercase;
+}
+
+.quntite button{
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: #A394FF;
+    color: #FFF;
+    transition: 0.2s;
+}
+
+
+.quntite div{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: #A394FF;
+    color: #FFF;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+
+.quntite button:hover{
+    scale: 1.1;
+}
+
+.stars{
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    gap: 5px;
+}
+
+.price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.54px;
+    text-transform: uppercase;
+    position: absolute;
+    right: 0%;
+    top: 0px;
+}

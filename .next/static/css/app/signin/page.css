@@ -1,0 +1,62 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./app/signin/page.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
+.page_main__rbJlI{
+    height: 100%;
+    width: 100dvw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000000000;
+}
+
+.page_main__rbJlI form{
+    position: relative;
+    margin: 30px;
+    max-width: 600px;
+    min-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    z-index: 100;
+}
+
+.page_main__rbJlI form input{
+    padding: 20px;
+    width: 90%;
+    border: none;
+    background: #E9E9E9;
+    color: black;
+    outline: none;
+}
+
+
+.page_main__rbJlI form button{
+    box-sizing: content-box;
+    padding: 20px;
+    width: 90%;
+    border: none;
+    color: #fff;
+    border-radius: 40px;
+    background: #A394FF;
+    transition: 0.2s;
+}
+
+/*hover section*/
+
+.page_main__rbJlI form button:hover{
+    background: #fff;
+    color: #A394FF;
+    border: 1px solid #A394FF;
+    scale: 1.02;
+}
+
+
+
+
+
+
+
+

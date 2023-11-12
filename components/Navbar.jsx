@@ -1,15 +1,47 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '@/styles/navbar.module.css'
 import Logo from '@/assets/logo.png'
 import Image from 'next/image'
 import Link from 'next/link'
+import Pproduct from './Pproduct'
+import { collection, getDocs, onSnapshot, query, where } from 'firebase/firestore'
+import { auth, db } from '@/firebase'
 
-function Navbar() {
+const FDFF = async () => {
+  // getting data from firestore
+  const PRef = collection(db, "panier");
+  const q = query(PRef, where("userId", "==", `${auth?.currentUser?.uid}`));
+  const querySnapshot = await getDocs(q)
+  // assigning the data to a variable
+  const data = [];
+  querySnapshot.forEach(doc => {
+    data.push({id: doc.id, ...doc.data()})
+  })
+  return data
+}
+
+export default function Navbar() {
 
   const [searchBar, setSearchBar] = useState(0)
   const [drop2, setDrop2] = useState(0)
   const [drop3, setDrop3] = useState(0)
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+
+    const fetchProducts = async () => {
+        const data = await FDFF();
+        setProducts(data)
+    }
+    fetchProducts();
+  }, [auth.currentUser])
+
+
+  const renderProducts = products.map(product => product.products.map(pro => <Pproduct Id={pro.productId} />))
+
+
+  
 
   return (
     <div className={styles.nav}>
@@ -34,7 +66,7 @@ function Navbar() {
               <path d="M16.0001 18.5C20.7339 18.5 24.5716 14.5824 24.5716 9.75C24.5716 4.91751 20.7339 1 16.0001 1C11.2663 1 7.42871 4.91751 7.42871 9.75C7.42871 14.5824 11.2663 18.5 16.0001 18.5Z" stroke="#151515" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </Link>
-        <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.svg} onClick={() => {setDrop2(1)}}>
+        <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.svg} onClick={() => {setDrop3(1)}}>
           <path d="M27.25 31.5C28.4926 31.5 29.5 30.4926 29.5 29.25C29.5 28.0074 28.4926 27 27.25 27C26.0074 27 25 28.0074 25 29.25C25 30.4926 26.0074 31.5 27.25 31.5Z" fill="#151515" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M12.25 31.5C13.4926 31.5 14.5 30.4926 14.5 29.25C14.5 28.0074 13.4926 27 12.25 27C11.0074 27 10 28.0074 10 29.25C10 30.4926 11.0074 31.5 12.25 31.5Z" fill="#151515" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M5.5 4.5H31L28 21H8.5L5.5 4.5ZM5.5 4.5C5.25 3.49999 4 1.5 1 1.5" stroke="#151515" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -83,8 +115,7 @@ function Navbar() {
                   <path d="M1 11L6.00002 6.00002M6.00002 6.00002L11 1M6.00002 6.00002L1 1M6.00002 6.00002L11 11"  strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>    
                 <div className={styles.dropDownContent}>
-                  <h2>Bracelets</h2>
-                  <h2>Colliers</h2>
+                  {renderProducts}
                 </div>          
               </div>
             </>
@@ -95,8 +126,7 @@ function Navbar() {
                   <path d="M1 11L6.00002 6.00002M6.00002 6.00002L11 1M6.00002 6.00002L1 1M6.00002 6.00002L11 11"  strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
                 <div className={styles.dropDownContent}>
-                  <h2>Bracelets</h2>
-                  <h2>Colliers</h2>
+                  
                 </div>
               </div>
             }
@@ -145,4 +175,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+

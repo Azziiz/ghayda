@@ -38,7 +38,7 @@ export default function Navbar() {
   }, [auth.currentUser])
 
 
-  const renderProducts = products.map(product => product.products.map(pro => <Pproduct Id={pro.productId} />))
+  const renderProducts = products.map(product => product.products.map(pro => <Pproduct Id={pro.productId} Quntite={pro.quntite}/>))
 
 
   
@@ -114,9 +114,12 @@ export default function Navbar() {
                 <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg} id={styles.close} width="12" height="12" viewBox="0 0 12 12" fill="none" onClick={() => {setDrop3(2),setTimeout(() => {setDrop3(0)}, 600)}}>
                   <path d="M1 11L6.00002 6.00002M6.00002 6.00002L11 1M6.00002 6.00002L1 1M6.00002 6.00002L11 11"  strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>    
-                <div className={styles.dropDownContent}>
+                <div className={styles.PdropDownContent}>
                   {renderProducts}
-                </div>          
+                </div> 
+                <div className={styles.commander}>
+                    <button>COMMANDER</button>
+                </div>         
               </div>
             </>
             }
@@ -125,8 +128,8 @@ export default function Navbar() {
                 <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg} id={styles.close} width="12" height="12" viewBox="0 0 12 12" fill="none" onClick={() => {setDrop3(0)}}>
                   <path d="M1 11L6.00002 6.00002M6.00002 6.00002L11 1M6.00002 6.00002L1 1M6.00002 6.00002L11 11"  strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                <div className={styles.dropDownContent}>
-                  
+                <div className={styles.PdropDownContent}>
+                  {renderProducts}
                 </div>
               </div>
             }

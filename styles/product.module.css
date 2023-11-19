@@ -5,6 +5,7 @@
     flex-direction: column;
     gap: 20px;
     color: black;
+    z-index: 10000;
 }
 
 
@@ -46,7 +47,7 @@
     width: 175px;
     height: 45px;
     color: #000;
-    z-index: 10000;
+    z-index: 100000000000;
     font-family: Nunito;
     font-size: 12px;
     font-style: normal;
@@ -88,5 +89,5 @@ text-transform: lowercase;
 
 
 .AjPanier:hover{
-    scale: 1.02;
+    scale: 1.5;
 }

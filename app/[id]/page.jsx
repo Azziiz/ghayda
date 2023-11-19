@@ -10,7 +10,7 @@ import { auth, db } from '@/firebase'
 import { UserAuth } from '@/contexts/context'
 
 function ProductPage() {
-    const hi = 2
+  
     const {id} = useParams()
     const [quntite, setQuntite] = useState(1)
     const [data, setData] = useState()

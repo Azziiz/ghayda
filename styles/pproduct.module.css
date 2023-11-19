@@ -1,10 +1,48 @@
 .main {
     display: flex;
+    margin: 20px;
+    gap: 50px;
+    height: 300px;
 }
 
-.main div {
+.mainImg{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+color: #000;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: lowercase;
+}
+
+
+.img{
+    position: relative;
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+}
+
+.info {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+}
+
+.top_info{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .quntite{
@@ -71,7 +109,25 @@
     line-height: normal;
     letter-spacing: 0.54px;
     text-transform: uppercase;
-    position: absolute;
-    right: 0%;
-    top: 0px;
+    position: relative;
+    top: 0;
+    align-self: flex-end;
+}
+
+@media screen and (max-width: 800px) {
+
+    .main{
+        scale: 0.8;
+        gap: 10px;
+        margin: 0px;
+        padding: 0;
+    }
+
+    .mainImg{
+        scale: 0.8;
+    }
+
+    .info{
+        scale: 0.8;
+    }
 }

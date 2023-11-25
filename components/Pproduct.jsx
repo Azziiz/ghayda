@@ -17,7 +17,8 @@ function Pproduct({Id, Quntite}) {
   return (
     <div className={styles.main}>
       <div className={styles.mainImg} style={{background: `${product?.colors[0]}`}}>
-        <Image className={styles.img}src={product?.images[0]} width='0' height='0' sizes="100vw" alt="Picture of the author" as='image'/>
+        {product?.images && <Image className={styles.img} src={product?.images[0]} width='0' height='0' sizes="100vw" alt="Picture of product" as='image'/>}
+
       </div>
       <div className={styles.info}>
         <div className={styles.top_info}>

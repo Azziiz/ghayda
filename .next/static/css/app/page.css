@@ -66,422 +66,21 @@
 }.__variable_1c0e92 {--font-surfer: '__Nunito_1c0e92', '__Nunito_Fallback_1c0e92'
 }
 
-/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./styles/pproduct.module.css ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************/
-.pproduct_main__mg09d {
-    display: flex;
-}
-
-.pproduct_main__mg09d div {
-    display: flex;
-    flex-direction: column;
-}
-
-.pproduct_quntite__Pfgc0{
-    display: flex;
-    gap: 5px;
-    z-index: 00000;
-}
-
-.pproduct_quntite__Pfgc0 h2{
-    color: #000;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.54px;
-    text-transform: uppercase;
-}
-
-.pproduct_quntite__Pfgc0 button{
-    width: 20px;
-    height: 20px;
-    border: none;
-    background: #A394FF;
-    color: #FFF;
-    transition: 0.2s;
-}
-
-
-.pproduct_quntite__Pfgc0 div{
-    display: flex;
-    width: 20px;
-    height: 20px;
-    border: none;
-    background: #A394FF;
-    color: #FFF;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
-}
-
-
-.pproduct_quntite__Pfgc0 button:hover{
-    scale: 1.1;
-}
-
-.pproduct_stars__bDvVm{
-    position: absolute;
-    bottom: 0px;
-    display: flex;
-    gap: 5px;
-}
-
-.pproduct_price__XYOyv{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.54px;
-    text-transform: uppercase;
-    position: absolute;
-    right: 0%;
-    top: 0px;
-}
-/*!********************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./styles/navbar.module.css ***!
-  \********************************************************************************************************************************************************************************************************************************************************************/
-.navbar_nav__bIAWS{
-    position: fixed;
-    top: 0px;
-    background-color: #ffff;
-    width: 100%;
-    max-height: 100px;
-    height: 20dvw;
-    min-height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    border-bottom: 1px solid gainsboro;
-     z-index: 100000;
-
-    
-}
-
-
-.navbar_logo__U0Ohb{
-    position: relative;
-    width: 110px;
-    height: 90px;
-    transition: 0.2s;
-    z-index: 10000;
-    padding: 10px;
-    padding-top: 20px;
-}
-
-
-.navbar_searcharea__pt_NZ{
-    position: relative;
-    height: 55px;
-    width: 40dvw;
-    transition: 0.2s;
-    padding: 0px 25px 0px 0px;
-    z-index: 10000;  
-}
-
-.navbar_searchbar__AHdhR{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    outline-color: none;
-    outline: #E9E9E9;
-    border: none;
-    padding: 0px 0px 0px 25px;
-    border-radius: 30px;
-    background-color: #E9E9E9;
-    z-index: 10000;
-    
-}
-
-.navbar_searcharea__pt_NZ span{
-    position: absolute;
-    right: 0%;
-    top: 20%;
-    padding-right: 20px;
-    z-index: 10000;
-}
-
-
-
-
-.navbar_usersection__y2i_M{
-    width: 170px;
-    display: flex;
-    justify-content: flex-end;
-    gap: 50px;
-    z-index: 10000;
-}
-
-.navbar_menu__In7QR{
-    width: 35px;
-    height: 35px;
-    transition: 0.2s;
-    display: none;
-    z-index: 10000;
-}
-
-.navbar_svg__eMFVP{
-    width: 35px;
-    height: 35px;
-    transition: 0.2s;
-}
-
-
-
-.navbar_dropDownContent__dcjQc{
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    align-items: center;
-    gap: 40px;
-}
-
-.navbar_dropDownContent__dcjQc h2{
-    padding: 5px;
-    transition: 0.2s;
-}
-
-.navbar_dropDown__Iq83C{
-    position: absolute;
-    display: flex;
-    gap: 10px;
-    justify-self: flex-end;
-    align-self: flex-start;
-    width: 100vw;
-    max-width: 600px;
-    right: 0px;
-    height: 100px;
-    align-items: flex-start;
-
-}
-
-.navbar_searchBarDrop__vO_BN{
-    position: absolute;
-    display: flex;
-    gap: 10px;
-    justify-self: flex-end;
-    align-self: flex-start;
-    width: 100%;
-    right: 0px;
-    max-height: 100px;
-    height: 20dvw;
-    min-height: 70px;
-    align-items: flex-start;
-
-}
-
-.navbar_focusLost__QSr0v{
-    display: flex;
-    justify-self: flex-start;
-    justify-content: center;
-    width: 100%;
-    height: 101vh;
-    min-width: 300px;
-    background-color: black;
-    opacity: 0.5;
-    position: absolute;
-    transition: 0.7s;
-    top: 0%;
-    animation-name: navbar_slide__WB1B1;
-    animation-duration: 0.7s;
-    z-index: 100000;
-}
-
-.navbar_blackSpace__AT3Tz{
-    display: flex;
-    justify-self: flex-end;
-    justify-content: center;
-    width: 100%;
-    height: 101vh;
-    min-width: 300px;
-    background-color: white;
-    opacity: 1;
-    position: absolute;
-    transition: 0.7s;
-    top: 0%;
-    animation-name: navbar_slide__WB1B1;
-    animation-duration: 0.7s;
-    z-index: 1000000000;
-
-}
-
-.navbar_blackSpace2__w_qhb{
-    border-left: 1px solid gray;
-    display: flex;
-    justify-self: flex-end;
-    justify-content: center;
-    width: 100%;
-    height: 101vh;
-    min-width: 300px;
-    background-color: white;
-    opacity: 1;
-    position: absolute;
-    z-index: 100000;
-    transition: 0.7s;
-    top: 0%;
-    animation-name: navbar_slide__WB1B1;
-    animation-duration: 0.7s;
-    animation-direction: reverse;
- 
-}
-
-.navbar_whiteSpace__6Gode{
-    display: flex;
-    justify-self: flex-end;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    min-width: 300px;
-    background-color: white;
-    opacity: 1;
-    position: absolute;
-    transition: 0.7s;
-    top: 0%;
-    animation-name: navbar_slide__WB1B1;
-    animation-duration: 0.7s;
-    z-index: 1000000000;
-
-}
-
-.navbar_whiteSpace2__zmM46{
-    border-left: 1px solid gray;
-    display: flex;
-    justify-self: flex-end;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    min-width: 300px;
-    background-color: white;
-    opacity: 1;
-    position: absolute;
-    z-index: 100000;
-    transition: 0.7s;
-    top: 0%;
-    animation-name: navbar_slide__WB1B1;
-    animation-duration: 0.7s;
-    animation-direction: reverse;
- 
-}
-
-.navbar_searchareaM__IEIIB{
-    position: relative;
-    display: flex;
-    align-self: center;
-    align-items: center;
-    height: 55px;
-    width: 70dvw;
-    transition: 0.2s;
-    padding: 0px 25px 0px 0px;
-    z-index: 10000;  
-    left: 30px;
-}
-
-.navbar_searchareaM__IEIIB span{
-    position: absolute;
-    right: 0%;
-    padding-right: 35px;
-    top: 20%;
-    z-index: 10000;
-}
-
-/*id section*/
-
-#navbar_close__G5Brb{
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    left: 15px;
-    top: 15px;
-    color: black;
-    stroke: black;
-}
-
-#navbar_openSearch__y8BSN{
-    display: none;
-}
-
-/*hover section*/
-
-.navbar_logo__U0Ohb:hover, .navbar_svg__eMFVP:hover, .navbar_menu__In7QR:hover{
-    transform: scale(1.1);
-}
-
-.navbar_dropDownContent__dcjQc h2:hover{
-    color: var(--purple);
-    border-bottom: 2px solid var(--purple);
-}
-
-#navbar_close__G5Brb:hover{
-    stroke: var(--purple);
-}
-
-/*media query*/
-
-@media screen and (max-width: 800px) {
-
- 
-
-    .navbar_searcharea__pt_NZ{
-        display: none;
-    }
-
-
-
-
-    .navbar_menu__In7QR{
-        display: flex;
-        width: 25px;
-        height: 25px;
-    }
-
-    .navbar_usersection__y2i_M{
-        position: relative;
-        display: flex;
-        width: 55dvw;
-        justify-content: space-evenly;
-        gap: 0;
-
-    }
-
-    .navbar_svg__eMFVP{
-        width: 25px;
-        height: 25px;
-        size: 25px;
-    }
-
-    #navbar_openSearch__y8BSN{
-        display: flex;
-    }
-
-
-  }
-
-
-  /*animations*/
-
-  @keyframes navbar_slide__WB1B1 {
-    from{
-        transform: translateX(100%);
-    }
-
-    to{
-        transform: translateX(0%);
-    }
-}
-
-
-
 /*!*********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./styles/product.module.css ***!
   \*********************************************************************************************************************************************************************************************************************************************************************/
+.product_main__z6KTl{
+    position: relative;
+    height: 460px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: black;
+    z-index: 10000;
+
+}
+
 .product_product__k3_pl{
     height: 460px;
     width: 280px;
@@ -489,6 +88,8 @@
     flex-direction: column;
     gap: 20px;
     color: black;
+    z-index: 10000;
+    position: relative;
 }
 
 
@@ -526,11 +127,11 @@
     border: none;
     position: absolute;
     left: 20px;
-    bottom: 20px;
+    bottom: 100px;
     width: 175px;
     height: 45px;
     color: #000;
-    z-index: 10000;
+    z-index: 1000000;
     font-family: Nunito;
     font-size: 12px;
     font-style: normal;
@@ -572,7 +173,7 @@ text-transform: lowercase;
 
 
 .product_AjPanier___MSqb:hover{
-    scale: 1.02;
+    scale: 1.1;
 }
 /*!***************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./app/page.module.css ***!

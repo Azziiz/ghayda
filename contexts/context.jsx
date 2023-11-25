@@ -36,8 +36,6 @@ export const AuthContextProvider = ({children}) => {
                 Docs.docs.forEach(Doc => {
                     const product = {quntite, productId}
                     const arr1 = Doc?.data().products
-                    console.log(!arr1.some(el => el.productId === product.productId))
-                    console.log(!arr1.includes(product))
                     if(!arr1.some(el => el.productId === product.productId)) {
                         arr1.push(product)
                     }
@@ -51,6 +49,10 @@ export const AuthContextProvider = ({children}) => {
  
         })
         .catch(err => console.log(err))
+    }
+
+    const updateQuntite = () => {
+        
     }
 
 

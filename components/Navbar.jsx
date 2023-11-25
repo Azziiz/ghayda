@@ -5,7 +5,7 @@ import Logo from '@/assets/logo.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import Pproduct from './Pproduct'
-import { collection, getDocs, onSnapshot, query, where } from 'firebase/firestore'
+import { collection, doc, getDocs, onSnapshot, query, where } from 'firebase/firestore'
 import { auth, db } from '@/firebase'
 
 const FDFF = async () => {
@@ -27,6 +27,8 @@ export default function Navbar() {
   const [drop2, setDrop2] = useState(0)
   const [drop3, setDrop3] = useState(0)
   const [products, setProducts] = useState([])
+  const docRef = doc(collection(db, 'panier'), `${products?.id}`)
+  
 
   useEffect(() => {
 
@@ -35,10 +37,11 @@ export default function Navbar() {
         setProducts(data)
     }
     fetchProducts();
-  }, [auth.currentUser])
+  }, [drop3])
 
+  
 
-  const renderProducts = products.map(product => product.products.map(pro => <Pproduct Id={pro.productId} Quntite={pro.quntite}/>))
+  const renderProducts = products.map(product => product.products.map(pro => <Pproduct Id={pro.productId} key={pro.productId} Quntite={pro.quntite}/>))
 
 
   
@@ -117,9 +120,11 @@ export default function Navbar() {
                 <div className={styles.PdropDownContent}>
                   {renderProducts}
                 </div> 
-                <div className={styles.commander}>
-                    <button>COMMANDER</button>
-                </div>         
+                {renderProducts && 
+                  <div className={styles.commander}>
+                      <button>COMMANDER</button>
+                  </div>         
+                }
               </div>
             </>
             }

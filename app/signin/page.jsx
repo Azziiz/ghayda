@@ -5,6 +5,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '@/firebase'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import Cookies from 'js-cookie'
 
 function page() {
 
@@ -16,13 +17,13 @@ function page() {
         e.preventDefault()
         try{
             await signInWithEmailAndPassword(auth, email, password)
+            Cookies.set('loggedin', true)
             router.push('/')
         }catch (e) {
           console.log(e.message)
       }
     }
 
-    console.log(auth.currentUser)
 
   return (
     <div className={Styles.main}>
